@@ -6,17 +6,19 @@ def main():
         page_icon=":wave:",
         layout="centered"
     )
-    st.title("Welcome to my Streamlit Website")
+    st.title("Welcome to my Capstone Website")
     st.write(
-        "Use the sidebar to navigate to the different pages: "
+        "Use the sidebar to navigate: "
         "Biography, Resume, Projects, and the deployed model for my capstone project."
     )
     st.write("""
              Hi! My name is Han and I currently work as a Data Analyst 
-             for a cancer center at MSKCC. My capstone project at Eastern University
+             for a cancer center at MSKCC. 
+             
+             My capstone project at Eastern University
              as a Masters Student in Data Science showcases a neural network 
              machine learning model trained on over 80k+ medical images across 30k+ patients
-             to classify any of 14 different thoracic pathologies, including cardiomegaly,
+             to classify images from 14 different thoracic pathologies, including cardiomegaly,
              masses, and hernias. 
 
              The deployed model is meant to be an interactive demo that allows 
@@ -25,7 +27,7 @@ def main():
              heatmap that illustrates how the model 'sees' features in the image to
              make a classification. 
 
-             I hope you enjoy! For more of my work, you can visit my (website)[https://hanlu.dev].
+             I hope you enjoy! For more of my work, you can visit my [website](https://hanlu.dev).
              """)
 
 if __name__ == "__main__":
