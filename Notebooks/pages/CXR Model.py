@@ -5,7 +5,7 @@ from PIL import Image
 import io
 import pandas as pd
 
-st.title("Thoracic Pathology CXR Model")
+st.title("Thoracic Pathology Chest X-Ray Classifier")
 st.write("Note: This model is for DEMO/RESEARCH USE only!")
 
 pt_train = pd.read_csv("Notebooks/miccai2023_nih-cxr-lt_labels_train.csv")
@@ -18,8 +18,8 @@ pt_train = pt_train.drop(columns=['Pneumoperitoneum',
                         axis = 0)
 pathology_names = list(pt_train.drop(['id','subj_id'], axis = 1).keys())
 
-# should have all patho names
-print(pathology_names)
+# print(pathology_names)
+# >working
 
 # Load trained model
 
@@ -201,9 +201,6 @@ def compute_top3_gradcams(
     plt.tight_layout()
     plt.show()
 
-
-# UI for streamlit:
-st.title("Chest X-Ray Pathology Classifier")
 st.write("Upload a chest X-ray image to get predictions from a trained DenseNet model.")
 
 uploaded_file = st.file_uploader("Choose a chest X-ray image to upload for analysis...", type=["png","jpg","jpeg"])
