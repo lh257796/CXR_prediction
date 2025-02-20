@@ -254,3 +254,6 @@ if uploaded_file is not None:
 
     st.write("Grad-CAM Heatmap (overlay for a single pathology):")
     st.image(overlay, use_column_width=True)
+
+
+# Preprocessing function: same processing as in the notebook
