@@ -5,7 +5,7 @@ from PIL import Image
 import io
 import pandas as pd
 
-pt_train = pd.read_csv("miccai2023_nih-cxr-lt_labels_train.csv")
+pt_train = pd.read_csv("Notebooks/miccai2023_nih-cxr-lt_labels_train.csv")
 pt_train = pt_train.drop(columns=['Pneumoperitoneum',
                                   'Pneumoperitoneum',
                                   'Pneumomediastinum',
@@ -23,10 +23,10 @@ print(pathology_names)
 # Load trained model
 
 def load_model():
-    model = tf.keras.models.load_model("cxr_model.h5", compile=False)
+    model = tf.keras.models.load_model("Notebooks/pretrained_model.h5", compile=False)
     return model
 
-model = load_model()
+# model = load_model()
 
 
 # Grad-CAM
@@ -205,7 +205,7 @@ def compute_top3_gradcams(
 st.title("Chest X-Ray Pathology Classifier")
 st.write("Upload a chest X-ray image to get predictions from a trained DenseNet model.")
 
-uploaded_file = st.file_uploader("Choose a CXR image...", type=["png","jpg","jpeg"])
+uploaded_file = st.file_uploader("Choose a chest X-ray image to upload for analysis...", type=["png","jpg","jpeg"])
 
 if uploaded_file is not None:
     # 4a) Preprocess
