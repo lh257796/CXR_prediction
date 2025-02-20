@@ -13,6 +13,7 @@ def main():
     1. **Data Analyst**, Memorial Sloan Kettering Cancer Center (2025 - Present)
        - Built chatbots and worked on MLOps 
        - Developed internal Python apps for data cleaning
+             
 
     2. **Fullstack Software Engineer**, GigFinesse (2022 - 2024)
        - Created Tableau dashboards for venues and internal teams presenting KPIs
@@ -21,7 +22,7 @@ def main():
              
     """)
 
-    st.image("resume_graphic.pdf", width=200)
+    st.image("Notebooks/Resume.png")
 
 if __name__ == "__main__":
     main()
