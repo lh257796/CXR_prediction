@@ -15,7 +15,7 @@ def main():
              Hi!
 
             My name is Han and I currently work as a Data Analyst
-             for a cancer center at MSK.
+             at MSKCC.
 
              My capstone project at Eastern University
              as a Data Science Masters student demonstrates a convolutional neural network (CNN)
