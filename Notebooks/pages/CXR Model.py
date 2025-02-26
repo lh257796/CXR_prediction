@@ -6,7 +6,12 @@ import io
 import pandas as pd
 import matplotlib.pyplot as plt
 
-pt_train = pd.read_csv("./miccai2023_nih-cxr-lt_labels_train.csv")
+# if local:
+# pt_train = pd.read_csv("./miccai2023_nih-cxr-lt_labels_train.csv")
+# if codespaces/online?
+pt_train = pd.read_csv("Notebooks/miccai2023_nih-cxr-lt_labels_train.csv")
+
+
 pt_train = pt_train.drop(
     columns=[
         'Pneumoperitoneum',
@@ -21,7 +26,11 @@ pt_train = pt_train.drop(
 pathology_names = list(pt_train.drop(['id', 'subj_id'], axis=1).keys())
 
 def load_model():
-    model = tf.keras.models.load_model("./cxr_model.keras", compile=False)
+    # if local:
+    #model = tf.keras.models.load_model("./cxr_model.keras", compile=False)
+    # if codespace/online?
+    model = tf.keras.models.load_model("Notebooks/cxr_model.keras", compile=False)
+
     return model
 
 model = load_model()
@@ -199,4 +208,4 @@ if uploaded_file is not None:
         grayscale=False
     )
     st.pyplot(plt.gcf())
-    st.write("_The darkest red portions of the heatmap indicate where the model is 'looking' the most when making a predictive classificaiton. Though Grad-CAM heatmaps are a way to introduce some transparency with the way a machine learning model makes its classifications, it doesn't quite fully explain how it comes to this conclusion and only offers a glimpse into the complex underlying mechanisms influencing the CNN. For that reason, these visualizations should be taken with a grain of salt._")
+    st.write("_The darkest red portions of the heatmap indicate where the model is 'looking' the most when making a predictive classification. Though Grad-CAM heatmaps are a way to introduce some transparency with the way a machine learning model makes its classifications, it doesn't quite fully explain how it comes to this conclusion and only offers a glimpse into the complex underlying mechanisms influencing the CNN. For that reason, these visualizations should be taken with a grain of salt._")
