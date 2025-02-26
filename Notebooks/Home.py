@@ -18,7 +18,12 @@ def main():
             I'm Han. Welcome to my website--here I'll be providing 
             a brief bio, my resume, links to my other works, and a demonstration of a
             machine learning project I've been working on for months! :books:
+            """)
+    col1, col2, col3 = st.columns(3)
+    with col2:
+        st.image("Notebooks/pages/transparent_background_profpic.png", caption="Nice to meet you!", width = 200)
 
+    st.write("""
              My capstone project at Eastern University
              as a Data Science Masters student demonstrates a convolutional neural network (CNN)
              machine learning model trained on over 80k+ medical images of chest X-rays across 30k+ patients
@@ -38,7 +43,6 @@ def main():
              If you'd like to reach out, you can contact me at my :email: [email](mailto:han.lu.122@gmail.com), or 
               send me a message on [LinkedIn](https://www.linkedin.com/in/-han-lu-)! :zap:
              """)
-    st.image("Notebooks/pages/Resume.png", caption="Han's Resume, updated Jan 2025")
 
     
 

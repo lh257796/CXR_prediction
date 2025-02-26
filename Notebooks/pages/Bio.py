@@ -4,7 +4,14 @@ def main():
     st.subheader("Academic Background")
 
     st.write("""
-        Thank you for checking out my about me page. I'm currently a Master's student in Data Science at Eastern University. 
+        Thank you for checking out my about me page!
+        """)
+    
+    st.image('Notebooks/pages/selfie.jpg', width = 500)
+
+    st.write("""
+             
+        I'm currently a Master's student in Data Science at Eastern University. 
         I'm passionate about building machine learning models for healthcare 
         applications. One example is using computer vision--like this capstone, where I build medical imaging 
         models to create predictions for different chest-related pathologies.
