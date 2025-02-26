@@ -21,7 +21,7 @@ def main():
             """)
     col1, col2, col3 = st.columns(3)
     with col2:
-        st.image("Notebooks/pages/transparent_background_profpic.png", caption="Nice to meet you!", width = 200)
+        st.image("Notebooks/pages/creambgprofpic.png", caption="Nice to meet you!", width = 200)
 
     st.write("""
              My capstone project at Eastern University
